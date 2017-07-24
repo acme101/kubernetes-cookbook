@@ -19,8 +19,8 @@ env:
   - INSTANCE=smoke-kubectl-ubuntu-1604
   - INSTANCE=smoke-gcloud-ubuntu-1604
   - INSTANCE=smoke-default-centos-73
-  - INSTANCE=smoke-gcloud-centos-73
-  - INSTANCE=smoke-default-centos-73
+  #- INSTANCE=smoke-gcloud-centos-73
+  - INSTANCE=smoke-kubectl-centos-73
 
 # Ensure we make ChefDK's Ruby the default
 before_script:
