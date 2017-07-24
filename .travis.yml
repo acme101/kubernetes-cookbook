@@ -16,9 +16,9 @@ services: docker
 env:
   matrix:
   - INSTANCE=smoke-default-ubuntu-1604
-  - INSTANCE=smoke-default-centos-73
+  - INSTANCE=smoke-default-centos-7
   - INSTANCE=smoke-kubectl-ubuntu-1604
-  - INSTANCE=smoke-kubectl-centos-73
+  - INSTANCE=smoke-kubectl-centos-7
   - INSTANCE=smoke-gcloud-ubuntu-1604
 
 # Ensure we make ChefDK's Ruby the default

@@ -20,9 +20,9 @@ platforms:
     intermediate_instructions:
       - RUN /usr/bin/apt-get update
       - RUN /usr/bin/apt-get -y install curl
-- name: centos-7.3
+- name: centos-7
   driver:
-    image: centos:7.3
+    image: centos:7
     privileged: true
     # pid_one_command: /usr/lib/systemd/systemd
     intermediate_instructions:
