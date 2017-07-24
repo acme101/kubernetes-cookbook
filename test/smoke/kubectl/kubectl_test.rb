@@ -8,3 +8,8 @@ describe command('which kubectl') do
   its(:exit_status) { should eq 0 }
   its(:stdout) { should match('/usr/local/bin/kubectl') }
 end
+
+describe command("kubectl version --short --client | cut -d ':' -f2") do
+  its(:exit_status) { should eq 0 }
+  its(:stdout) { should match('v1.7.0') }
+end

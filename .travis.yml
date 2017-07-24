@@ -18,13 +18,16 @@ env:
   - INSTANCE=smoke-default-ubuntu-1604
   - INSTANCE=smoke-kubectl-ubuntu-1604
   - INSTANCE=smoke-gcloud-ubuntu-1604
-  
+  - INSTANCE=smoke-default-centos-73
+  - INSTANCE=smoke-gcloud-centos-73
+  - INSTANCE=smoke-default-centos-73
+
 # Ensure we make ChefDK's Ruby the default
 before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
   - chef gem install kitchen-dokken
-  
+
 script: KITCHEN_LOCAL_YAML=.kitchen.dokken.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
 
 matrix:
